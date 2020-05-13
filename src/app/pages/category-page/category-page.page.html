@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="categories"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{currentCategory?.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid fixed="true">
+  <ion-row *ngFor="let product of categoryProducts">
+    <ion-col>{{product.name}}</ion-col>
+    
+    <ion-col>
+      <ion-item routerDirection = "root" (click)="loadDetails(product.id,currentCategory.id)" >
+      <ion-img [src]="[product.imgUrl]"></ion-img>
+    </ion-item>
+  </ion-col>
+  
+  </ion-row>
+</ion-grid>
+</ion-content>

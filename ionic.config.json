@@ -1,5 +1,7 @@
 {
   "name": "ionic_workshop_demo_11052020",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

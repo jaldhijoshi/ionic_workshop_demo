@@ -1,0 +1,32 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{currentProduct?.name}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+<ion-tabs>
+
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="detail">
+      <ion-icon name="information"></ion-icon>
+      <ion-label>Details</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="reviews">
+      <ion-icon name="eye"></ion-icon>
+      <ion-label>Reviews</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="ymal">
+      <ion-icon name="happy"></ion-icon>
+      <ion-label>You may also like!</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>
+</ion-content>

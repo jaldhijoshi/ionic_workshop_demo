@@ -1,0 +1,36 @@
+[{
+   
+    "id":"mens",
+    "name":"Mens",
+    "icon":"man",
+    "url" :"/category/mens",
+    "image":""
+},
+{
+   
+    "id":"womens",
+    "name":"Women",
+    "icon":"woman",
+    "url" :"/category/womens",
+    "image":""
+},
+{
+   
+    "id":"footware",
+    "name":"Footware",
+    "icon": "football",
+    "url" :"/category/footware",
+    "image":"football"
+},
+{
+   
+    "id":"accessories",
+    "name":"Accessories",
+    "icon":"glasses",
+    "url" :"/category/accessories",
+    "image":"glasses"
+}
+
+
+
+]

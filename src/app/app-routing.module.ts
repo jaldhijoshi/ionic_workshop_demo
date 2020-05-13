@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'categories',
+    loadChildren: () => import('./pages/category-list/category-list.module').then( m => m.CategoryListPageModule)
+  },
+  {
+    path: 'category/:id',
+    loadChildren: () => import('./pages/category-page/category-page.module').then( m => m.CategoryPagePageModule)
+  },
+  {
+    path: 'product/:id',
+    loadChildren: () => import('./pages/product-page/product-page.module').then( m => m.ProductPagePageModule)
+  },
+  {
+    path: 'product-reviews',
+    loadChildren: () => import('./pages/product-reviews/product-reviews.module').then( m => m.ProductReviewsPageModule)
+  },
+  {
+    path: 'product-ymal',
+    loadChildren: () => import('./pages/product-ymal/product-ymal.module').then( m => m.ProductYmalPageModule)
+  }
 ];
 
 @NgModule({

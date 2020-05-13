@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Shopping Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <ion-item *ngFor="let category of categories" routerDirection="forward" [routerLink]=[category.url]>
+      <ion-icon slot="start" [ios]="category.icon + '-outline'" [md]="category.icon + '-sharp'"></ion-icon>
+      <ion-label>{{category.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

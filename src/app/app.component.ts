@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -9,13 +9,30 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  public sideMenuItems =[{
+      "id":"home",
+      "title": "Home",
+      "url": "/home",
+      "icon": "home"
+    },
+    {
+      "id": "category",
+      "title":"Shopping Category",
+      "url": "/categories",
+      "icon":"list"
+    }];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,private menu: MenuController
   ) {
     this.initializeApp();
+  }
+  ngOnInit(): void {
+    // throw new Error("Method not implemented.");
   }
 
   initializeApp() {
@@ -24,4 +41,6 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  
 }

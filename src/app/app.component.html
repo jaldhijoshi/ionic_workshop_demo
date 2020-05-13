@@ -1,3 +1,23 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  
+  
+  <ion-menu contentId="main-content" side ="start" menuId="sideMenu" type="overlay" >
+
+      <ion-content>
+          <ion-list>
+              <ion-list-header>e-Commerce</ion-list-header>
+              <ion-menu-toggle auto-hide="false" *ngFor="let p of sideMenuItems; let i = index">
+                <ion-item routerDirection="backword" [routerLink]="[p.url]" lines="full" detail="false">
+                  <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+                  <ion-label>{{ p.title }}</ion-label>
+                </ion-item>
+              </ion-menu-toggle>
+          </ion-list>
+
+      </ion-content>
+
+  </ion-menu>
+ 
+
+  <ion-router-outlet id="main-content" ></ion-router-outlet>
 </ion-app>
