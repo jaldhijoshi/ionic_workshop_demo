@@ -13,10 +13,15 @@ export class CategoryListPage implements OnInit {
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
+    console.log("CategoryListPage ngOnInit");
     let onSuccess= (data)=>{
       this.categories = data;
     }
     this.categoryService.loadCategories(onSuccess);
+ }
+
+ ionViewWillEnter(){
+  console.log("CategoryListPage ionViewWillEnter");
  }
 
  

@@ -17,6 +17,7 @@ export class CategoryPagePage implements OnInit {
   constructor(private router:Router,private activatedRoute: ActivatedRoute,private categoryService:CategoryService) { }
 
   ngOnInit() {
+    console.log("CategoryPagePage ngOnInit");
     let categoryId = this.activatedRoute.snapshot.paramMap.get("id");
     let onSuccess = (data)=>{
       this.currentCategory = data;
@@ -24,6 +25,10 @@ export class CategoryPagePage implements OnInit {
      
     }
     this.categoryService.getCategory(categoryId,onSuccess);
+  }
+
+  ionViewWillEnter(){
+    console.log("CategoryPagePage ionViewWillEnter");
   }
 
   loadProducts(){

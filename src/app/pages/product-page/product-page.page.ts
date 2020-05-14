@@ -22,4 +22,8 @@ export class ProductPagePage implements OnInit {
     this.categoryService.getProduct(productId,currentCategoryId,onSuccess);
   }
 
+  swipeEvent(){
+    console.log("Tabs Swipe!");
+  }
+
 }
